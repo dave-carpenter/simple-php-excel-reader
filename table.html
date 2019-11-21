@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>iterate table test</title>
+  </head>
+  <body>
+    <input type="file" name="fileToUpload" id="fileToUpload">
+
+    <table name="mytab" id="mytab1" style="border:1px solid black">
+      <tr>
+        <td><textarea>row1a</textarea></td>
+        <td><textarea>row1b</textarea></td>
+        <td><textarea>row1c</textarea></td>
+        <td><textarea>row1d</textarea></td>
+      </tr>
+      <tr>
+        <td><textarea>row2a</textarea></td>
+        <td><textarea>row2b</textarea></td>
+        <td><textarea>row2c</textarea></td>
+        <td><textarea>row2d</textarea></td>
+      </tr>
+    </table>
+  </body>
+
+  <button onclick="readTable()">read table</button>
+
+</html>
+
+<form>
+  <textarea required pattern="^[\p{L}\s'.-]+$"></textarea>
+  <button type="submit">ooh wa-a-a-a</button>
+</form>
+
+<script>
+
+  function readTable() {
+    var x = document.getElementsByTagName("textarea");
+    var ct = 0;
+    var tableData = [];
+      for (var i = 0; i < x.length; i++) {
+        tableData[i] = x[i].value;
+        console.log(x[i].value);
+    }
+console.log('INSERT INTO students (firstName, lastName) VALUES (' + x[i].value + ', ' + x[i+1].value + ');')
+
+  }
+
+</script>
